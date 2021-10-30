@@ -1,0 +1,3 @@
+# Practice_Landing-Page-With-Light-Dark-Mode
+We're going to build this awesome landing page with this beautiful design using only HTML and CSS, we're also gonna use vanilla Javascript to create light mode and dark mode switching option on the landing page, we're going to take the theme toggle to the next level by creating an awesome overlay animation around the theme switch. Not only that, we're also going to see how we can make this landing page completely responsive on any device, so it stays responsive no matter what the size of the device is. 
+Link: https://tuannd20.github.io/Practice_Landing-Page-With-Light-Dark-Mode/
