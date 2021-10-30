@@ -1,0 +1,50 @@
+// Select the element
+
+var toggle_btn;
+var big_wrapper;
+
+function declare() {
+  toggle_btn = document.querySelector(".toggle-btn");
+  big_wrapper = document.querySelector(".big-wrapper");
+}
+
+const main = document.querySelector("main");
+
+declare();
+
+let dark = false;
+
+function toggleAnimation() {
+  // clone the wrapper
+  dark = !dark;
+
+  let clone = big_wrapper.cloneNode(true);
+  if (dark === true) {
+    clone.classList.remove("dark");
+    clone.classList.add("light");
+  } else {
+    clone.classList.remove("light");
+    clone.classList.add("dark");
+  }
+  clone.classList.add("copy");
+  main.appendChild(clone);
+
+  document.body.classList.add("stop-scrolling");
+
+  clone.addEventListener("animationend", () => {
+    document.body.classList.remove("stop-scrolling");
+    big_wrapper.remove();
+    clone.classList.remove("copy");
+    //Reset variable
+    declare();
+    events();
+  });
+}
+
+function events() {
+  toggle_btn.addEventListener("click", toggleAnimation);
+}
+
+events();
+
+
